@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #08080a;
+    color: #eeeef2;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #08080a; }
+  ::-webkit-scrollbar-thumb { background: #2a2a35; border-radius: 3px; }
+}
+
+@layer utilities {
+  .font-syne { font-family: 'Syne', sans-serif; }
+  .glass {
+    background: rgba(17,17,21,0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #fff 30%, #9999b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-glow-cars    { box-shadow: 0 0 0 1px rgba(245,166,35,0.3),  0 8px 32px rgba(245,166,35,0.08); }
+  .card-glow-bikes   { box-shadow: 0 0 0 1px rgba(232,54,110,0.3),  0 8px 32px rgba(232,54,110,0.08); }
+  .card-glow-phones  { box-shadow: 0 0 0 1px rgba(54,201,232,0.3),  0 8px 32px rgba(54,201,232,0.08); }
+  .card-glow-computers { box-shadow: 0 0 0 1px rgba(124,106,245,0.3), 0 8px 32px rgba(124,106,245,0.08); }
+  .shimmer {
+    background: linear-gradient(90deg, #1a1a22 25%, #22222c 50%, #1a1a22 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
